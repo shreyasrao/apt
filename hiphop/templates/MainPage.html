@@ -1,0 +1,22 @@
+{% extends "Base.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+
+{% block body %}
+    <div class="jumbotron">
+      <h1>Hip Hop x</h1>
+      <p>
+          A collection of the latest and most popular rap, hip-hop and R&B songs.<br>
+          Get recommended artists and event suggestions based on the songs that you like.
+      </p>
+      <p><a class="btn btn-primary btn-lg" href="{{ login_url }}" role="button">
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>Sign in using Google
+      </a></p>
+    </div>
+
+{% endblock %}
+
+

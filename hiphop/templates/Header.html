@@ -1,0 +1,70 @@
+<!doctype html>
+{% extends "Base.html" %}
+{% autoescape true %}
+<html lang="en">
+<body>
+{% block b1 %}
+
+    <br>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+    <div>
+        <p class="navbar-text">
+            <span class="label label-default">hip hop x</span>
+        </p>
+
+        <ul class="nav navbar-nav">
+        {% if current != "latest" %}
+            <li><a href="/latest" class="navbar-link">Latest</a></li>
+        {% else %}
+            <li ><p class="navbar-text"><font color="#ff8c00">Latest</font></p></li>
+        {% endif %}
+
+        {% if current != "popular" %}
+            <li><a href="/popular" class="navbar-link">Popular</a></li>
+        {% else %}
+            <li><p class="navbar-text"><font color="#ff8c00">Popular</font></p></li>
+        {% endif %}
+
+        {% if current != "liked_songs" %}
+            <li><a href="/like_songs" class="navbar-link">Liked Songs</a></li>
+        {% else %}
+            <li><p class="navbar-text"><font color="#ff8c00">Liked Songs</font></p></li>
+        {% endif %}
+
+        {% if current != "liked_artists" %}
+            <li><a href="/like_artists" class="navbar-link">Liked Artists</a></li>
+        {% else %}
+            <li><p class="navbar-text"><font color="#ff8c00">Liked Artists</font></p></li>
+        {% endif %}
+{##}
+        {% if current != "rec_artists" %}
+            <li><a href="/rec_artists" class="navbar-link">Recommended Artists</a></li>
+        {% else %}
+            <li><p class="navbar-text"><font color="#ff8c00">Recommended Artists</font></p></li>
+        {% endif %}
+
+        {% if current != "rec_events" %}
+            <li><a href="/rec_events" class="navbar-link">Recommended Events</a></li>
+        {% else %}
+            <li><p class="navbar-text"><font color="#ff8c00">Recommended Events</font></p></li>
+        {% endif %}
+        </ul>
+
+        <p class="navbar-text">
+            Signed in as <span class="label label-primary">{{ user }}</span>
+        </p>
+{#        <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>#}
+        <button type="button" class="btn btn-default navbar-btn"><a href="{{ logout_url }}" class="navbar-link">Log Out</a></button>
+    </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+{% endblock %}
+</body>
+
+</html>
+{% endautoescape %}

@@ -1,0 +1,33 @@
+<!doctype html>
+{% autoescape true %}
+{#<h4 class="text-center">These recommendations will change based on your likes</h4>#}
+
+<div class="row">
+  {% for event in events %}
+
+
+        <div class="col-md-6" align="center">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h5><a href="{{ event.Url }}" style="color: white">{{ event.Title }}</a></h5>
+          </div>
+          <div class="panel-body">
+            {{ event.Location }}<br>
+              {{ event.Date }}<br><br>
+          </div>
+        </div>
+{#        <div class="well well-sm">#}
+
+
+
+
+{#        </div>#}
+        </div>
+  {% endfor %}
+
+
+{#    .col-md-4#}
+</div>
+
+</html>
+{% endautoescape %}

@@ -1,0 +1,8 @@
+cron:
+- description: update latest songs
+  url: /update_latest
+  schedule: every 24 hours
+
+- description: update popular songs
+  url: /update_popular
+  schedule: every 24 hours

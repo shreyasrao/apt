@@ -1,0 +1,11 @@
+--- HelloWorld.java	2015-09-21 22:43:21.012826585 -0500
++++ HelloWorldDe.java	2015-09-21 22:42:26.664826788 -0500
+@@ -1,7 +1,7 @@
+ 
+ public class HelloWorld {
+ 	public static void main( String [] args){
+-		System.out.println("Hello World!");
++		System.out.println("Hallo Welt!");
+ 	}
+ 
+ }
